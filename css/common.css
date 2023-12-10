@@ -19,8 +19,7 @@ body {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-  width: 360px;
-  height: 300px;
+  padding: 100px 156px;
 }
 
 .set-item {

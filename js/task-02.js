@@ -41,8 +41,7 @@ const gallery = images.map((image) => {
   imageG.alt = image.alt;
   imageG.width = "360";
   imageG.height = "300";
-  // imageG.classList.add("set-item");
-
+ 
   liG.appendChild(imageG);
  
  return liG;
