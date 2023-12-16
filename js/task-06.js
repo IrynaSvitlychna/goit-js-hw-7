@@ -9,6 +9,7 @@ const btns = document.querySelectorAll("button");
 const boxes = document.querySelector("#boxes");
 
 const createBoxes = (amount) => {
+
   boxes.innerHTML = ""
   for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
@@ -19,29 +20,30 @@ const createBoxes = (amount) => {
 
     boxes.append(div);
   }
-  input.reset();
+ 
 };
 
-input.addEventListener("input", createBox);
-
+input.addEventListener("input", createBoxes);
 const createBtn = (event) => {
   event.preventDefault();
-
+  // boxes.innerHTML = "";
   const quantity = input.value;
   const quantityNumber = parseInt(quantity, 10);
 
   if (quantityNumber > 0 && quantityNumber <=100) {
     createBoxes(quantityNumber);
+    input.value = "";
   }
  
 };
 
-const destroyBtn = (event) => {
+const destroyBoxes = (event) => {
   event.preventDefault();
 
   boxes.innerHTML = "";
 };
 
-btns[0].addEventListener("click", createBtn);
-btns[1].addEventListener("click", destroyBtn);
-
+const saveBtn = document.querySelector('#controls button[data-create]');
+const closeBtn = document.querySelector('#controls button[data-destroy]');
+saveBtn.addEventListener("click", createBtn);
+closeBtn.addEventListener("click", destroyBoxes);
