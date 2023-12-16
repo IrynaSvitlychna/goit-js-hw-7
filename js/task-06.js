@@ -8,7 +8,7 @@ const input = document.querySelector("input");
 const btns = document.querySelectorAll("button");
 const boxes = document.querySelector("#boxes");
 
-const createBox = (amount) => {
+const createBoxes = (amount) => {
   boxes.innerHTML = ""
   for (let i = 0; i < amount; i++) {
     const div = document.createElement("div");
@@ -31,7 +31,7 @@ const createBtn = (event) => {
   const quantityNumber = parseInt(quantity, 10);
 
   if (quantityNumber > 0 && quantityNumber <=100) {
-    createBox(quantityNumber);
+    createBoxes(quantityNumber);
   }
  
 };

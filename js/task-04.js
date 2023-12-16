@@ -5,7 +5,7 @@ const newObj = {};
 form.addEventListener("submit", (event) => {
     
 event.preventDefault();
- 
+ const { email, password } => event.target.elements
 const formData = new FormData(event.target);
 // event.target.element.trim();
 formData.forEach((value, key) => { 
