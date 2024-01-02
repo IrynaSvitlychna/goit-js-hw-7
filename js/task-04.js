@@ -10,17 +10,23 @@ event.preventDefault();
  email.value.trim();
  password.value.trim();
 
-const formData = new FormData(event.target);
+ if (email.value === "" || password.value === "") {
+    alert `All form fields must be filled in`;
+        // return console.log("Please fill in all the fields!");
+      }
 
-formData.forEach((value, key) => { 
-    newObj[key] = value;
+// const formData = new FormData(event.target);
+
+// formData.forEach((value, key) => { 
+//     newObj[key] = value;
   
-    if (!newObj[key]) {
-        alert `All form fields must be filled in`;
-     };
-    })
+    
+//     if (!newObj[key]) {
+//         alert `All form fields must be filled in`;
+//      };
+//     })
 
-console.log(newObj);
+// console.log(newObj);
 form.reset();
 
 })

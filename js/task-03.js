@@ -5,7 +5,7 @@ let username = "";
 
 userName.addEventListener("input", (event) => {
     username = event.target.value;
-   username.trim();
+    event.target.value.trim();
     if (!event.target.value) {
         newValue.textContent = "Anonymous"; 
     } else  {
