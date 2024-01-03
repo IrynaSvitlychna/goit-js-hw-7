@@ -12,9 +12,9 @@ event.preventDefault();
 
  if (email.value === "" || password.value === "") {
     alert `All form fields must be filled in`;
-        // return console.log("Please fill in all the fields!");
+      }  else {
+        console.log(`email: ${email.value}, password: ${ password.value}`);
       }
-
 // const formData = new FormData(event.target);
 
 // formData.forEach((value, key) => { 
@@ -23,10 +23,11 @@ event.preventDefault();
     
 //     if (!newObj[key]) {
 //         alert `All form fields must be filled in`;
-//      };
+//      } else {
+  // console.log(newObj);
 //     })
 
-// console.log(newObj);
+// 
 form.reset();
 
 })
