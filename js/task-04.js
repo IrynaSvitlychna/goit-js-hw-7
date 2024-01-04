@@ -15,6 +15,8 @@ event.preventDefault();
       }  else {
         console.log(`email: ${email.value}, password: ${ password.value}`);
       }
+
+      
 // const formData = new FormData(event.target);
 
 // formData.forEach((value, key) => { 
