@@ -1,6 +1,6 @@
 const form = document.querySelector(".login-form");
 
-const newObj = {};
+// const newObj = {};
 
 form.addEventListener("submit", (event) => {
     
@@ -16,7 +16,10 @@ event.preventDefault();
         console.log(`email: ${email.value}, password: ${ password.value}`);
       }
 
-      
+form.reset();
+
+})
+
 // const formData = new FormData(event.target);
 
 // formData.forEach((value, key) => { 
@@ -30,7 +33,3 @@ event.preventDefault();
 //     })
 
 // 
-form.reset();
-
-})
-
